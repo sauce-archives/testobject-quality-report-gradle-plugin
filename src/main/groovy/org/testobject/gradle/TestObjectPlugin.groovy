@@ -13,7 +13,7 @@ class TestObjectQualityReportPlugin implements Plugin<Project> {
 	void apply(Project project) {
 		extension = project.extensions.create(PLUGIN_NAME, TestObjectExtension)
 		project.logger
-		project.task('testobjectQualityReport') << {
+		project.task('startQualityReport') << {
 			new TestObjectTestServer(extension, project.logger).startQualityReport()
 		}
 	}
