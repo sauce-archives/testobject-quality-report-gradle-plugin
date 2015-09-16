@@ -1,0 +1,7 @@
+/target/
+/.settings/
+/.classpath
+/.project
+
+.idea
+testobject-quality-report-gradle-plugin.iml
