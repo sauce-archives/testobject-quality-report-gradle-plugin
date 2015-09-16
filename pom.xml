@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.testobject</groupId>
 	<artifactId>testobject-quality-report-gradle-plugin</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<name>TestObject Quality Report Gradle Plugin</name>
 
 	<properties>
