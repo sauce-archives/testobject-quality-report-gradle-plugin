@@ -3,27 +3,28 @@ testobject-quality-report-gradle-plugin
 
 TestObject Quality Report Gradle Plugin
 
-Use this plugin to execute a Quality Report on app.testobject.com.
+Use this plugin to execute Quality Reports on app.testobject.com.
 
 Add the following to your build.gradle file:
 
 ```
 buildscript {
-        repositories {
-                maven { url 'http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo' }
-        }
- 
-        dependencies {
-                classpath group: 'org.testobject', name: 'testobject-quality-report-gradle-plugin', version: '0.0.1'
-        }
+	repositories {
+		mavenCentral()
+		maven { url 'http://nexus.testobject.org/nexus/content/repositories/testobject-public-repo' }
+	}
+
+	dependencies {
+		classpath group: 'org.testobject', name: 'testobject-quality-report-gradle-plugin', version: '0.0.3'
+	}
 }
 
-apply plugin: 'testobject-quality-report'
+apply plugin: 'testobjectQualityReport'
 
-testobject-quality-report {
-	username "your-username" // username you use for login into testobject, not your email
-	password "your-password" // password you use for login into testobject
-	team "your-team-name" // name of the team you belong to (optional)
-	app "your-app-name" // name of your app
+testobjectQualityReport {
+	username "your_username" // username you use for login into TestObject, not your email
+	password "your_password" // password you use for login into TestObject
+	team "your_team_name" // name of the team you belong to (optional)
+	app "your_app_name" // name of your app
 }
 ```
